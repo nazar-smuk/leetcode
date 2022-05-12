@@ -7,24 +7,11 @@ import java.util.stream.Collectors;
 class Main {
   public static void main(String[] args) {
 
-    Solution1 solution1 = new Solution1();
-    int a[] = {1,2,3,4,5,6,7};
-//    Solution1.sortedSquares(a);
-//
-//    for (int i : Solution1.sortedSquares(a)) {
-//      System.out.println(i);
-
-      Solution2 solution2 = new Solution2();
-      solution2.rotate(a, 3);
-
-
-
-
 
   }
 
 
-  public static class Solution2 {
+  public static class RotateArray {
     public void rotate(int[] nums, int k) {
       List<Integer> squareNumbers = Arrays.stream(nums).boxed().collect(Collectors.toList());
       Collections.rotate(squareNumbers, k);
@@ -33,7 +20,7 @@ class Main {
     }
   }
 
-  public static class Solution1 {
+  public static class SquaresOfSortedArray {
     public static int[] sortedSquares(int[] nums) {
       List<Integer> squareNumbers = Arrays.stream(nums).boxed().collect(Collectors.toList());
       Function<Integer, Integer> square = x -> x * x;
@@ -42,7 +29,7 @@ class Main {
     }
   }
 
-  public static class Solution3 {
+  public static class BinarySearch {
     public int search(int[] nums, int target) {
       int index = -1;
       for (int o = 0; o < nums.length; o++) {
@@ -54,7 +41,7 @@ class Main {
     }
   }
 
-  public static class Solution4 {
+  public static class SearchInsertPosition {
     public int searchInsert(int[] nums, int target) {
       int index = 0;
       boolean isTarget = false;
